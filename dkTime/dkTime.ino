@@ -1,5 +1,7 @@
 #include "Watchy_dkTime.h"
-WatchyDkTime watchy;
+#include "settings.h"
+
+WatchyDkTime watchy(settings);
 
 void setup(){
   watchy.init();
