@@ -6,13 +6,13 @@ const unsigned char *dk_anim1 [2] = {dk_1, dk_2};
 const unsigned char *dk_anim2 [2] = {dk_3, dk_4};
 const unsigned char *dk_anim3 [4] = {dk_5, dk_6, dk_7, dk_8};
 
-WatchyDkTime::WatchyDkTime(){} //constructor
+RTC_DATA_ATTR bool playAnim = true;
 
 void WatchyDkTime::drawWatchFace(){
     int Hour = currentTime.Hour;
     
     //Change to 12 Hour Time
-    if(twelve_mode) {
+    if(HOUR_12_24==12) {
         if (Hour > 12) {
           Hour = Hour - 12;
         } else if (Hour == 0) {
