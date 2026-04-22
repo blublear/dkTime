@@ -1,12 +1,12 @@
 #ifndef WATCHY_DKTIME_H
 #define WATCHY_DKTIME_H
 
-#include "Watchy_Base.h"
+#include <Watchy.h>
 #include "dkong.h"
 
-class WatchyDkTime : public WatchyBase{
+class WatchyDkTime : public Watchy{
+    using Watchy::Watchy;
     public:
-        WatchyDkTime();
         void drawWatchFace();
         void drawAnim();
 };
